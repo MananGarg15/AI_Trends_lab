@@ -1,0 +1,8 @@
+FROM docker pull spark:python3
+
+WORKDIR /app
+
+COPY titanic.csv /app/titanic.csv
+COPY Q1.ipynb /app/Q1.ipynb
+
+CMD ["spark-submit", "/app/Q1.ipynb"]
